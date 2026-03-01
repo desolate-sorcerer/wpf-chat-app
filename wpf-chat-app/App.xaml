@@ -4,6 +4,31 @@
              xmlns:local="clr-namespace:wpf_chat_app"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Assets/icons.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="IconButtonStyle" TargetType="{x:Type Button}">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="Height" Value="50" />
+                <Setter Property="Width" Value="50" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Button}">
+                            <Border
+                                Background="{TemplateBinding Background}">
+                                <Viewbox Width="15" Height="15">
+                                    <Path 
+                                        Data="{TemplateBinding Content}"
+                                        Fill="{TemplateBinding Foreground}"/>
+                                </Viewbox>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
