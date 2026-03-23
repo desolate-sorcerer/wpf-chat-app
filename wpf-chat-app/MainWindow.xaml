@@ -66,8 +66,9 @@
                     <MenuItem Header="Izhod"/>
                 </MenuItem>
                 <MenuItem Header="Stiki">
-                    <MenuItem Header="Dodaj stik"/>
+                    <MenuItem Header="Dodaj stik" x:Name="addContact" Click="addContact_Click"/>
                     <MenuItem Header="Izbriši stik"/>
+                    <MenuItem Header="Uredi stik"/>
                 </MenuItem>
                 <MenuItem Header="Orodja">
                     <MenuItem Header="Nastavitve"/>

@@ -10,5 +10,14 @@ namespace wpf_chat_app
         public string name { get; set; }
         public string imagePath { get; set; }
         public ObservableCollection<Message> ChatHistory { get; set; } = new ObservableCollection<Message>();
+
+        public Contact()
+        {
+            this.name = string.Empty;
+            this.imagePath = string.Empty;
+        }
+        public Contact(string name) { 
+            this.name = name;
+        }
     }
 }

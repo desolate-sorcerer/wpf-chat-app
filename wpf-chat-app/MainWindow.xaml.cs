@@ -13,9 +13,6 @@ using static wpf_chat_app.MainWindow;
 
 namespace wpf_chat_app
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public ObservableCollection<Contact> Contacts { get; set; }
@@ -83,6 +80,13 @@ namespace wpf_chat_app
 
                 MessageBox.Clear();
             }
+        }
+
+        private void addContact_Click(object sender, RoutedEventArgs e)
+        {
+            var ownedWindow = new Window1();
+            ownedWindow.Owner = this;
+            ownedWindow.Show();     
         }
     }
 }
