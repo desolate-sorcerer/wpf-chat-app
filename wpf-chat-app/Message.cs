@@ -4,6 +4,7 @@ using System.Text;
 
 namespace wpf_chat_app
 {
+    [Serializable]
     public class Message
     {
         public string text { get; set; }
